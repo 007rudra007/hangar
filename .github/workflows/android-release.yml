@@ -43,7 +43,16 @@ jobs:
 
       - name: Build APK (Debug)
         working-directory: ./android
-        run: gradle assembleDebug --stacktrace --info
+        run: |
+          gradle assembleDebug --stacktrace --info > build_log.txt 2>&1 || true
+          cat build_log.txt
+
+      - name: Upload Build Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: android/build_log.txt
 
       - name: Upload Build Reports
         if: failure()
