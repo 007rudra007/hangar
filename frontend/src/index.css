@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Warm Redwood Palette */
+    /* Primary: #A35C4E -> 15 50% 40% */
+    --p: 15 50% 40%;
+    /* On Primary: #FFFFFF -> 0 0% 100% */
+    --op: 0 0% 100%;
+    /* Primary Container: #F5E3E0 -> 15 65% 90% */
+    --pc: 15 65% 90%;
+    /* On Primary Container: (Derived/Fallback) Dark Brown */
+    --opc: 15 40% 20%;
+
+    /* Background: #FAFAFA -> 0 0% 98% */
+    --bg: 0 0% 98%;
+    /* On Background: #1C1C1C -> 0 0% 11% */
+    --obg: 0 0% 11%;
+
+    /* Surface: #FFFFFF -> 0 0% 100% */
+    --s: 0 0% 100%;
+    /* On Surface: #1C1C1C -> 0 0% 11% */
+    --os: 0 0% 11%;
+    /* Surface Variant: A bit darker than surface for cards/inputs */
+    --sv: 0 0% 96%;
+    --osv: 0 0% 40%;
+
+    /* Secondary: #E6A300 -> 35 100% 45% */
+    --sec: 35 100% 45%;
+    --on-sec: 0 0% 100%;
+    --sec-c: 35 100% 90%;
+    --on-sec-c: 35 100% 20%;
+  }
+
+  .dark {
+    /* Dark Mode - Warm Redwood Palette */
+    /* Primary: #D6A59A -> 15 50% 75% */
+    --p: 15 50% 75%;
+    /* On Primary: #1F1F1F -> 0 0% 12% */
+    --op: 0 0% 12%;
+    /* Primary Container: #452D28 -> 15 40% 20% */
+    --pc: 15 40% 20%;
+    /* On Primary Container: #F5E3E0 -> 15 65% 90% */
+    --opc: 15 65% 90%;
+
+    /* Background: #1F1F1F -> 0 0% 12% */
+    --bg: 0 0% 12%;
+    /* On Background: #E4E4E4 -> 0 0% 89% */
+    --obg: 0 0% 89%;
+
+    /* Surface: #282828 -> 0 0% 16% */
+    --s: 0 0% 16%;
+    /* On Surface: #E4E4E4 -> 0 0% 89% */
+    --os: 0 0% 89%;
+
+    /* Surface Variant */
+    --sv: 0 0% 20%;
+    --osv: 0 0% 80%;
+
+    /* Secondary */
+    --sec: 35 100% 45%;
+    /* Kept same as requested */
+    --on-sec: 0 0% 12%;
+    --sec-c: 35 100% 20%;
+    --on-sec-c: 35 100% 90%;
+  }
+
+  body {
+    @apply bg-background text-on-background font-sans antialiased transition-colors duration-300;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
