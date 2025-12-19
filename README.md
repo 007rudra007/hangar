@@ -1,6 +1,6 @@
-# OpenWardrobeTryOn
+# Hangar
 
-A fully working "smart wardrobe + virtual try-on" app.
+Hangar is a "smart wardrobe + virtual try-on" Android application.
 Local-first, privacy-focused, and open source.
 
 ## Features
@@ -11,34 +11,45 @@ Local-first, privacy-focused, and open source.
 
 ## Tech Stack
 
-- **Backend**: Python 3.10+, FastAPI, SQLite.
-- **Frontend**: React, TypeScript, Tailwind CSS, Vite.
-- **Architecture**: Monorepo.
+- **Framework**: React Native / Capacitor
+- **UI**: React, TypeScript, Tailwind CSS
+- **Build Tool**: Vite
 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.10+
 - Node.js 18+
+- Android Studio (for building the APK locally)
 
-### Backend Setup
-1. `cd backend`
-2. `python -m venv venv`
-3. Activate venv:
-   - Windows: `venv\Scripts\activate`
-   - Linux/Mac: `source venv/bin/activate`
-4. `pip install -r requirements.txt`
-5. `cp .env.example .env` (Edit `.env` if needed)
-6. `python -m app.main` or `uvicorn app.main:app --reload`
+### Development Setup
+1. `npm install`
+2. `npm run dev` (Runs the web version in browser)
 
-### Frontend Setup
-1. `cd frontend`
-2. `npm install`
-3. `cp .env.example .env`
-4. `npm run dev`
+### Build Android APK
 
-## Media
-Images are stored in `backend/media`.
+#### Option 1: GitHub Actions (Automatic)
+This repository uses GitHub Actions to automatically build the APK.
+1.  Go to the **Actions** tab in this repository.
+2.  Select the latest workflow run.
+3.  Download the **app-debug** artifact to get the APK.
+
+#### Option 2: Local Build (Android Studio)
+1.  Build the web assets:
+    ```bash
+    npm run build
+    npx cap sync
+    ```
+2.  Open in Android Studio:
+    ```bash
+    npx cap open android
+    ```
+3.  In Android Studio:
+    -   Wait for Gradle sync to finish.
+    -   Go to **Build** > **Build Bundle(s) / APK(s)** > **Build APK(s)**.
+    -   The APK will be generated in `android/app/build/outputs/apk/debug/`.
+
+## Contributing
+We welcome contributions! Please feel free to check our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to proceed.
 
 ## License
-MIT
+MIT © 2025 Hangar Contributors
