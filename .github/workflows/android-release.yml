@@ -45,6 +45,13 @@ jobs:
         working-directory: ./android
         run: gradle assembleDebug --stacktrace --info
 
+      - name: Upload Build Reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-reports
+          path: android/app/build/reports
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
