@@ -1,0 +1,138 @@
+{
+  "app": {
+    "name": "Hangar",
+    "displayName": "OpenWardrobe",
+    "applicationId": "com.openwardrobe.app",
+    "materialVersion": 3
+  },
+  "theme": {
+    "defaultSeedColor": "0xFFA35C4E",
+    "presetSeedColors": [
+      { "name": "Redwood", "hex": "#A35C4E", "argb": "0xFFA35C4E" },
+      { "name": "SlateBlue", "hex": "#4E6472", "argb": "0xFF4E6472" },
+      { "name": "SageGreen", "hex": "#4E725C", "argb": "0xFF4E725C" },
+      { "name": "Plum", "hex": "#724E64", "argb": "0xFF724E64" },
+      { "name": "Sandstone", "hex": "#72644E", "argb": "0xFF72644E" },
+      { "name": "OceanTeal", "hex": "#006780", "argb": "0xFF006780" }
+    ],
+    "lightColorScheme": {
+      "brightness": "light",
+      "primary": "0xFF994C33",
+      "primaryReference": "0xFFA35C4E",
+      "onPrimary": "0xFFFFFFFF",
+      "primaryContainer": "0xFFF6DDD5",
+      "onPrimaryContainer": "0xFF47291F",
+      "secondary": "0xFFE68600",
+      "secondaryReference": "0xFFE6A300",
+      "onSecondary": "0xFFFFFFFF",
+      "secondaryContainer": "0xFFFFEACC",
+      "onSecondaryContainer": "0xFF663C00",
+      "surface": "0xFFFFFFFF",
+      "onSurface": "0xFF1C1C1C",
+      "surfaceContainerHighest": "0xFFF5F5F5",
+      "onSurfaceVariant": "0xFF666666",
+      "scaffoldBackground": "0xFFFAFAFA",
+      "onBackground": "0xFF1C1C1C",
+      "outline": "0xFF79747E",
+      "outlineBorderOpacity": 0.1,
+      "error": "0xFFB3261E",
+      "onError": "0xFFFFFFFF"
+    },
+    "darkColorScheme": {
+      "brightness": "dark",
+      "primary": "0xFFDFAF9F",
+      "primaryReference": "0xFFD6A59A",
+      "onPrimary": "0xFF1F1F1F",
+      "primaryContainer": "0xFF47291F",
+      "primaryContainerReference": "0xFF452D28",
+      "onPrimaryContainer": "0xFFF6DDD5",
+      "secondary": "0xFFE68600",
+      "secondaryReference": "0xFFE6A300",
+      "onSecondary": "0xFF1F1F1F",
+      "secondaryContainer": "0xFF663C00",
+      "onSecondaryContainer": "0xFFFFEACC",
+      "surface": "0xFF292929",
+      "surfaceReference": "0xFF282828",
+      "onSurface": "0xFFE3E3E3",
+      "surfaceContainerHighest": "0xFF333333",
+      "onSurfaceVariant": "0xFFCCCCCC",
+      "scaffoldBackground": "0xFF1F1F1F",
+      "onBackground": "0xFFE3E3E3",
+      "outline": "0xFF79747E",
+      "outlineBorderOpacity": 0.1,
+      "error": "0xFFB3261E",
+      "onError": "0xFFFFFFFF"
+    }
+  },
+  "typography": {
+    "fontFamily": "Roboto",
+    "scale": {
+      "headlineLarge": { "fontSize": 30.0, "fontWeight": 700, "tailwind": "text-3xl font-bold" },
+      "headlineMedium": { "fontSize": 24.0, "fontWeight": 700, "tailwind": "text-2xl font-bold" },
+      "titleLarge": { "fontSize": 20.0, "fontWeight": 700, "tailwind": "text-xl font-bold" },
+      "titleMedium": { "fontSize": 18.0, "fontWeight": 600, "tailwind": "text-lg font-semibold" },
+      "bodyLarge": { "fontSize": 16.0, "fontWeight": 400, "tailwind": "text-base" },
+      "bodyMedium": { "fontSize": 14.0, "fontWeight": 500, "tailwind": "text-sm font-medium" },
+      "labelMedium": { "fontSize": 12.0, "fontWeight": 500, "tailwind": "text-xs font-medium" },
+      "labelSmall": { "fontSize": 10.0, "fontWeight": 500, "tailwind": "text-[10px]" }
+    }
+  },
+  "radii": {
+    "md": 6.0,
+    "lg": 8.0,
+    "2xl": 16.0,
+    "3xl": 24.0,
+    "xlOverridden": 28.0,
+    "pill": 999.0
+  },
+  "shadows": {
+    "md3Level1": [
+      { "color": "0x26000000", "offsetX": 0.0, "offsetY": 1.0, "blurRadius": 3.0, "spreadRadius": 1.0 },
+      { "color": "0x4D000000", "offsetX": 0.0, "offsetY": 1.0, "blurRadius": 2.0, "spreadRadius": 0.0 }
+    ],
+    "md3Level2": [
+      { "color": "0x26000000", "offsetX": 0.0, "offsetY": 2.0, "blurRadius": 6.0, "spreadRadius": 2.0 },
+      { "color": "0x4D000000", "offsetX": 0.0, "offsetY": 1.0, "blurRadius": 2.0, "spreadRadius": 0.0 }
+    ]
+  },
+  "layout": {
+    "maxContentWidth": 1024.0,
+    "formMaxWidth": 672.0,
+    "outfitFormMaxWidth": 896.0,
+    "authCardMaxWidth": 448.0,
+    "sidebarWidth": 256.0,
+    "mobileContentPadding": 16.0,
+    "desktopContentPadding": 32.0,
+    "bottomNavClearance": 96.0,
+    "tabletBreakpoint": 768.0,
+    "desktopBreakpoint": 1024.0,
+    "aspectRatios": {
+      "itemCard": 0.75,
+      "outfitCard": 1.7778,
+      "squarePicker": 1.0,
+      "recreateDropzone": 1.7778
+    }
+  },
+  "animations": {
+    "themeTransitionMs": 300,
+    "fadeInMs": 400,
+    "fadeInTranslateY": 10.0,
+    "cardImageScaleMs": 500,
+    "cardImageHoverScale": 1.05,
+    "toastDurationMs": 2000
+  },
+  "pdfCatalog": {
+    "headerColor": "0xFF496472",
+    "headerFontSize": 22.0,
+    "subtitleColor": "0xFF646464",
+    "subtitleFontSize": 10.0,
+    "titleColor": "0xFF000000",
+    "titleFontSize": 14.0,
+    "bodyColor": "0xFF3C3C3C",
+    "bodyFontSize": 11.0,
+    "dividerColor": "0xFFDCDCDC",
+    "thumbnailWidth": 40.0,
+    "thumbnailHeight": 50.0,
+    "rowHeight": 60.0
+  }
+}

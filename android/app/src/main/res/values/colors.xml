@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launch_background">#FAFAFA</color>
+    <color name="colorPrimary">#A35C4E</color>
+    <color name="colorPrimaryContainer">#F5E3E0</color>
+    <color name="colorSecondary">#E6A300</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorError">#B3261E</color>
+</resources>

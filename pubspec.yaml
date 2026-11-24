@@ -34,3 +34,4 @@ flutter:
   assets:
     - assets/icon.png
     - assets/images/
+    - assets/design/design_tokens.json
