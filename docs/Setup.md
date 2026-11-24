@@ -2,27 +2,29 @@
 
 ## Prerequisites
 Ensure you have the following installed:
-1.  **Node.js**: Version 20.x (Required by Capacitor)
-2.  **Java JDK**: Version 21 (Required by Android Build)
-3.  **Android Studio**: Latest version with Android SDK built-tools.
+1. **Flutter SDK**: Stable channel (Dart `^3.5.0`)
+2. **Java JDK**: Version 17+
+3. **Android Studio**: Latest version with Android SDK built-tools
 
 ## Installation
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/007rudra007/hangar.git
-    cd hangar
-    ```
+1. **Clone the repository and switch to the `flutter` branch**:
+   ```bash
+   git clone -b flutter https://github.com/007rudra007/hangar.git
+   cd hangar
+   ```
 
-2.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
+2. **Install Dependencies**:
+   ```bash
+   flutter pub get
+   ```
 
-3.  **Setup Environment Variables**:
-    Copy `.env.example` to `.env` (if applicable) and configure your keys.
+3. **Run Doctor Check**:
+   ```bash
+   flutter doctor
+   ```
 
-4.  **Run Development Server** (Web):
-    ```bash
-    npm run dev
-    ```
+4. **Run App** (once Dart files are implemented):
+   ```bash
+   flutter run
+   ```

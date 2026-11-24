@@ -1,16 +1,16 @@
 # Hangar Wiki
 
-Welcome to the **Hangar** documentation!
+Welcome to the **Hangar (Flutter)** documentation!
 
 ## Project Overview
-Hangar is a Virtual Wardrobe application built with web technologies and wrapped for Android using Capacitor.
+Hangar is a local-first Virtual Wardrobe and Virtual Try-On Android application ported to Flutter.
 
 ## Technology Stack
--   **Frontend**: React (Vite)
--   **Styling**: Tailwind CSS
--   **Mobile Bridge**: Capacitor
--   **Platform**: Android
+- **Framework**: Flutter
+- **Language**: Dart
+- **Database**: SQLite (`sqflite`)
+- **Platform**: Android (`com.openwardrobe.app`)
 
 ## Documentation
--   [Development Setup](Setup.md)
--   [Building and Releasing](Building.md)
+- [Development Setup](Setup.md)
+- [Building and Releasing](Building.md)

@@ -2,39 +2,35 @@
 
 ## Local Android Build
 
-1.  **Build Web Assets**:
-    ```bash
-    npm run build
-    ```
+1. **Fetch Flutter Packages**:
+   ```bash
+   flutter pub get
+   ```
 
-2.  **Sync with Capacitor**:
-    ```bash
-    npx cap sync android
-    ```
+2. **Build Debug APK**:
+   ```bash
+   flutter build apk --debug
+   ```
+   Output: `build/app/outputs/apk/debug/app-debug.apk`
 
-3.  **Open in Android Studio**:
-    ```bash
-    npx cap open android
-    ```
-    From Android Studio, you can run the app on an emulator or connected device.
+3. **Build Release APK**:
+   ```bash
+   flutter build apk --release
+   ```
 
 ## Automated Releases (CI/CD)
 
 The project uses GitHub Actions for continuous integration and deployment.
 
 ### Triggers
--   **Push to `main`**: Runs the build to verify integrity.
--   **Tag `v*` (e.g., `v1.0.0`)**: Triggers a Release Build.
-    -   Builds the Debug APK.
-    -   Creates a GitHub Release.
-    -   Uploads the APK (`app-debug.apk`) to the release.
+- **Push to `flutter`**: Runs `flutter analyze`, `flutter test`, and builds the debug APK.
+- **Tag `v*` (e.g., `v1.0.0`)**: Triggers a Release Build, creates a GitHub Release, and uploads `app-debug.apk`.
 
 ### How to Release
-To publish a new version:
-1.  Commit your changes.
-2.  Create a tag:
-    ```bash
-    git tag v1.1.0
-    git push origin v1.1.0
-    ```
-3.  Wait for the GitHub Action to complete. The text APK will be available in the "Releases" section of the repository.
+1. Commit your changes.
+2. Create and push a tag:
+   ```bash
+   git tag v1.1.0
+   git push origin v1.1.0
+   ```
+3. Download the APK from the **Releases** section of the repository.

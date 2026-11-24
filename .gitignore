@@ -1,37 +1,45 @@
-# General
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
 Thumbs.db
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ / Android Studio / VS Code
+*.iml
+*.ipr
+*.iws
 .idea/
 .vscode/
 
-# Node
-node_modules/
-dist/
-build/
-coverage/
-.npm/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Flutter / Dart / Pub
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-venv/
-env/
-.venv/
-.pytest_cache/
-.coverage
-htmlcov/
+# Android
+android/.gradle/
+android/captures/
+android/local.properties
+android/key.properties
+android/**/*.jks
+android/**/*.keystore
+android/**/generated_plugin_registrant.*
+android/app/debug/
+android/app/profile/
+android/app/release/
 
 # Environment Variables
 .env
 .env.*
 !.env.example
-
-# Project Specific
-backend/media/
-backend/*.db
-frontend/dist/
-frontend/build/
